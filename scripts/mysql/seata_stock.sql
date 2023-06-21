@@ -28,3 +28,8 @@ create table undo_log
 )
     charset = utf8;
 
+insert into stock_tbl (id, commodity_code, count)
+values (1, 'product-1', 999999999);
+
+insert into stock_tbl (id, commodity_code, count)
+values (2, 'product-2', 0);

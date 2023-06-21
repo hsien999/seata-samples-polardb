@@ -52,4 +52,8 @@ alter table undo_log
 create index ix_log_created
     on undo_log (log_created);
 
+insert into stock_tbl (id, commodity_code, count)
+values (1, 'product-1', 999999999);
 
+insert into stock_tbl (id, commodity_code, count)
+values (2, 'product-2', 0);

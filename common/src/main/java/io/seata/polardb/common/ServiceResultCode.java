@@ -3,7 +3,7 @@ package io.seata.polardb.common;
 /**
  * 服务结果码
  *
- * @author hsien
+ * @author hsien999
  **/
 public class ServiceResultCode {
     public static final int SUCCESS = 0;

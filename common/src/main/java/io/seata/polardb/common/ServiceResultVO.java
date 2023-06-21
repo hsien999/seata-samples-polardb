@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 服务 VO
  *
- * @author hsien
+ * @author hsien999
  **/
 @Data
 public class ServiceResultVO implements Serializable {
