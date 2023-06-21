@@ -1,0 +1,36 @@
+# server
+server:
+  port: 9091
+# spring
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:postgresql://xxx.rwlb.polardb-pg-public.rds.aliyuncs.com:1921/seata_order
+    driverClassName: org.postgresql.Driver
+    username: xxx
+    password: xxx
+# seata
+seata:
+  enabled: true
+  enable-auto-data-source-proxy: false
+  data-source-proxy-mode: AT
+  use-jdk-proxy: false
+  tx-service-group: default_tx_group
+  registry:
+    type: nacos
+    nacos:
+      serverAddr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      group: SEATA_GROUP
+      application: seata-server
+      context-path: /nacos
+  config:
+    type: nacos
+    nacos:
+      serverAddr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      group: SEATA_GROUP
+      context-path: /nacos

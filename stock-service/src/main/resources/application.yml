@@ -1,0 +1,36 @@
+# server
+server:
+  port: 9092
+# spring
+spring:
+  application:
+    name: stock-service
+  datasource:
+    url: jdbc:mysql://xxx.rwlb.rds.aliyuncs.com:3306/seata_stock?allowMultiQueries=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: xxx
+    password: xxx
+# seata
+seata:
+  enabled: true
+  enable-auto-data-source-proxy: false
+  data-source-proxy-mode: AT
+  use-jdk-proxy: false
+  tx-service-group: default_tx_group
+  registry:
+    type: nacos
+    nacos:
+      serverAddr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      group: SEATA_GROUP
+      application: seata-server
+      context-path: /nacos
+  config:
+    type: nacos
+    nacos:
+      serverAddr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      group: SEATA_GROUP
+      context-path: /nacos

@@ -1,0 +1,15 @@
+### commmit placeOrder
+GET 127.0.0.1:9091/order/placeOrder?userId=1&commodityCode=product-1&count=1
+Accept: application/json
+
+### rollback placeOrder
+GET 127.0.0.1:9091/order/placeOrder?userId=1&commodityCode=product-2&count=1
+Accept: application/json
+
+### commmit cancelOrder
+GET 127.0.0.1:9091/order/cancelOrder?id=1
+Accept: application/json
+
+### rollback cancelOrder
+GET 127.0.0.1:9091/order/cancelOrder?id=-1
+Accept: application/json
